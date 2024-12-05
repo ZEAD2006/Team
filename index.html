@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolves Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="w.icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Poppins:wght@300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            background-color: #b68928d8;
+        }
+        
+        header {
+            background-color: rgba(255, 228, 228, 0);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        header .logo h1 {
+            font-family: inherit;
+            font-size: 24px;
+            color: rgb(255, 170, 0);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            /* يسمح بالتفاف العناصر على الشاشات الصغيرة */
+        }
+        
+        nav ul li {
+            margin-left: 15px;
+        }
+        
+        nav ul li a {
+            color: rgb(255, 210, 28);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #000000;
+            color: rgb(255, 170, 0);
+            border-radius: 20px;
+        }
+        
+        nav ul li .register-btn {
+            background-color: #ff7b00;
+            color: rgb(255, 64, 0);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: .5s;
+        }
+        
+        nav ul li .register-btn:hover {
+            background-color: #ff0000;
+            color: #ff9d00;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(wolve.icon) no-repeat center center/cover;
+            color: rgb(255, 0, 0);
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-text h2 {
+            font-size: 36px;
+            /* حجم خط أصغر للشاشات الصغيرة */
+            margin-bottom: 20px;
+            color: blue;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            /* حجم خط أصغر للشاشات الصغيرة */
+            margin-bottom: 30px;
+            color: black;
+        }
+        
+        .btn-primary {
+            background-color: #e8e4e216;
+            color: rgb(255, 170, 0);
+            padding: 10px 20px;
+            /* تقليل حجم الأزرار */
+            font-size: 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 1s;
+        }
+        
+        .btn-primary:hover {
+            background-color: rgb(255, 170, 0);
+            color: #000000;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            max-width: 95%;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 1 200px;
+            /* السماح بتوزيع العناصر في المساحة المتاحة */
+            min-width: 200px;
+            /* الحد الأدنى من العرض للمجموعات */
+        }
+        
+        .button-container button {
+            background-color: #f18d0000;
+            color: rgb(255, 0, 0);
+            border: none;
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 16px;
+            /* حجم خط أصغر للأزرار */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 5px 0;
+            /* مسافة بين الأزرار */
+            width: 100%;
+            /* تجعل الأزرار تأخذ عرض المربع */
+        }
+        
+        .button-container button:hover {
+            background-color: #000000;
+            transform: scale(1.1);
+        }
+        
+        footer {
+            background-color: #00000023;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: static;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Media Queries for responsiveness */
+        
+        @media (max-width: 768px) {
+            .hero-text h2 {
+                font-size: 28px;
+            }
+            .hero-text p {
+                font-size: 16px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+            .button-container button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header .logo h1 {
+                font-size: 20px;
+            }
+            .btn-primary {
+                font-size: 20px;
+            }
+            .button-container {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="w.icon" alt="Lotus Logo" style="width: 45px; height: 45px; margin-right: 10px;">
+            <h1>Wolves Team</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://lum.edu.eg">University website</a></li>
+                <li><a href="https://www.facebook.com/groups/1368812704104595/?ref=share&mibextid=NSMWBT">Wolves Facebook</a></li>
+                <li><a href="https://chat.whatsapp.com/HNvpxCXxS391DjUI3Ft25W">Wolves WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <a href="https://whatsapp.com/channel/0029VauQHLg0G0XnqMpLY93X" class="btn-primary">Go to Wolves Channel</a>
+        </div>
+    </div>
+
+    <section class="button-container">
+        <!-- 1 -->
+        <div class="button-group">
+            <h3></h3>
+            <!-- <a href=""><button>Group</button></a> -->
+            <a href=""><button>Zeyad nasser</button></a>
+            <a href=""><button>1</button></a>
+            <a href=""><button>2</button></a>
+            <a href=""><button>3</button></a>
+            <a href=""><button>4</button></a>
+            <a href=""><button>5</button></a>
+        </div>
+        <!-- Group 2 -->
+        <div class="button-group">
+            <h3></h3>
+            <!-- <a href=""><button>Group</button></a> -->
+            <a href=""><button>Abdelrahman ali</button></a>
+            <a href=""><button>1</button></a>
+            <a href=""><button>2</button></a>
+            <a href=""><button>3</button></a>
+            <a href=""><button>4</button></a>
+            <a href=""><button>5</button></a>
+        </div>
+        <!-- Group 3 -->
+        <div class="button-group">
+            <h3></h3>
+            <a href=""><button>Mahmoud gad</button></a>
+            <a href=""><button>1</button></a>
+            <a href=""><button>2</button></a>
+            <a href=""><button>3</button></a>
+            <a href=""><button>4</button></a>
+            <a href=""><button>5</button></a>
+        </div>
+        <!-- Group 4 -->
+        <div class="button-group">
+            <h3></h3>
+            <!-- <a href=""><button>Group</button></a> -->
+            <a href=""><button>Viola malak</button></a>
+            <a href=""><button>1</button></a>
+            <a href=""><button>2</button></a>
+            <a href=""><button>3</button></a>
+            <a href=""><button>4</button></a>
+            <a href=""><button>5</button></a>
+        </div>
+        <!-- Group 5 -->
+        <div class="button-group">
+            <h3></h3>
+            <!-- <a href=""><button>Group</button></a> -->
+            <a href=""><button>Abdelrahman moamen</button></a>
+            <a href=""><button>1</button></a>
+            <a href=""><button>2</button></a>
+            <a href=""><button>3</button></a>
+            <a href=""><button>4</button></a>
+            <a href=""><button>5</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>❤️ powered by Zeyad baghdadi ❤️</p>
+        <p>❤️2024/2025❤️</p>
+    </footer>
+
+</body>
+
+</html>
